@@ -11,7 +11,6 @@ class CalendarView extends Component {
   }
 
   render() {
-    console.log("prop", this.props.date);
     const { date,removeCalender } = this.props;
     let myDate = moment(date).format("YYYY-MM-DD");
     let modifiedDate = "'" + myDate + "'";

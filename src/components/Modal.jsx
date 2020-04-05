@@ -23,14 +23,13 @@ class Modal extends Component {
         })
     }
   render() {
-    console.log(this.props.activity_periods);
     const { activity_periods,closeModal, name } = this.props;
     return (
       <div id="modal">
         <h2>Activity period details of {name}</h2>
         <table>
           <tbody>
-          <tr>
+          <tr id="headings">
             <th>Date</th>
             <th>Start Time</th>
             <th>EndTime</th>
@@ -52,7 +51,7 @@ class Modal extends Component {
         
         <button className="close" onClick={()=>closeModal()}>Close</button>
          {this.state.showCalender && this.state.date && <CalendarView 
-         date ={this.state.date && this.state.date.slice(0,10)} 
+         date ={this.state.date && this.state.date.slice(0,11)} 
          removeCalender={this.removeCalender}/>}
         
       </div>

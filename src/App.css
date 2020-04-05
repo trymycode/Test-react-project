@@ -3,36 +3,66 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
 }
 .App {
   margin: 5px 10px;
 }
 .listContainer {
+  margin-left: 2rem;
+}
+.listContainer p {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.listContainer ul li {
+  cursor: pointer;
+  list-style-type: square;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #4b86b4;
+}
+.listContainer ul li:hover {
+  color: #636674;
 }
 #modal {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   margin: 5px;
   padding: 10px;
   width: 500px;
-  height: 500px;
-  position: relative;
-  top: 50%;
+  height: 417px;
+  position: absolute;
+  top: 20%;
   left: 25%;
-  border: 1px solid #666;
+  color: #636674;
+  padding-left: 20px;
+  box-shadow: -5px 5px 5px #bbb;
+  border-radius: 8px;
+}
+#modal h2 {
+  color: #636674;
+  font-weight: normal;
 }
 table {
+  color: #636674;
   width: 400px;
   max-height: 400px;
 }
 table,
 th,
 td {
-  border: 1px solid #666;
+  border: 1px solid #d9d2f9;
   border-collapse: collapse;
 }
 th,
 td {
   padding: 15px;
   text-align: left;
+  background-color: #fff;
 }
 
 .close {
@@ -45,18 +75,33 @@ td {
   margin: 10px 0 10px 10px;
   color: #4b86b4;
   font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.close:hover {
+  background-color: transparent;
+  cursor: pointer;
 }
 #view {
-  color: blue;
+  color: #4b86b4;
   cursor: pointer;
+}
+#view:hover {
+  color: #656274;
+  background: transparent;
 }
 .calenderBox {
   position: absolute;
-  top: 16%;
-  left: 60%;
+  top: 18%;
+  left: 62%;
   z-index: 10;
   width: 350px;
   height: 360;
-  border: 1px solid #4b86b4;
+  border: 1px solid #ddd;
   background-color: #eee3e7;
+  box-shadow: -4px 4px 4px #999;
+  box-sizing: border-box;
+}
+.react-calendar {
+  border: none !important;
 }
